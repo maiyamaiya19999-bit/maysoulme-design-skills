@@ -22,29 +22,29 @@ description: Создаёт HTML-презентацию на весь экран
 ### Цвета
 - Фон: `#ffffff`
 - Текст: `#1a1a1a`
-- Текст второстепенный: `#444`, `#666`, `#888`
-- Акцент (бордовый): `#710C04` — курсивные выделения в заголовках, точки списков, бейджи, цифры
-- Серые блоки: `#f5f5f5` — без закруглений, без цветных линий
-- Карточки: `#f9f9f9` с рамкой `#e8e8e8` — квадратные углы
-- На тёмном фоне НИКОГДА не использовать бордовый — заменять на `#c9a07a`
+- Текст второстепенный: `#4a4238`, `#6b6157`, `#948a7c`
+- Акцент (коричневый): `#6b4f35` — курсивные выделения в заголовках, точки списков, бейджи, цифры
+- �бежевые блоки: `#f5f0e8` — без закруглений, без цветных линий
+- Карточки: `#faf6f0` с рамкой `#e5dccf` — квадратные углы
+- На тёмном фоне НИКОГДА не использовать коричневый — заменять на `#c9a07a`
 
 ### Шрифты (Google Fonts)
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
 ```
-- **Заголовки**: `Libre Baskerville`, Georgia, serif — жирный, курсивные акценты бордовым
+- **Заголовки**: `Libre Baskerville`, Georgia, serif — жирный, курсивные акценты коричневым
 - **Основной текст**: `Inter`, sans-serif
-- **Декоративные цифры**: `Libre Baskerville`, italic, бордовый (часто opacity 0.25)
-- **Ник maysoulme**: `DM Sans`, italic, `#888`
+- **Декоративные цифры**: `Libre Baskerville`, italic, коричневый (часто opacity 0.25)
+- **Ник maysoulme**: `DM Sans`, italic, `#948a7c`
 
 ### Навбар (на каждом слайде)
 - На всю ширину слайда, логотип MS слева, текст *maysoulme* справа
 - Логотип: `<img src="https://maiyamaiya19999-bit.github.io/maysoulme-assets/logo-ms.png" alt="MS">` высота 38px
-- Текст maysoulme: DM Sans italic, 17px, `#888`
-- Тонкая линия снизу `#f0f0f0`
+- Текст maysoulme: DM Sans italic, 17px, `#948a7c`
+- Тонкая линия снизу `#f0e9df`
 
 ### Бейдж (на титульном слайде)
-- Тонкая рамка 1px бордовая, текст капсом, разрядка 2.5px, размер 14px
+- Тонкая рамка 1px коричневая, текст капсом, разрядка 2.5px, размер 14px
 - Текст: «УРОК», «ГАЙД», «КУРС», «ПРЕЗЕНТАЦИЯ» и т.п.
 
 ## Важные правила
@@ -250,7 +250,7 @@ description: Создаёт HTML-презентацию на весь экран
 
 ```css
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --accent: #710C04; }
+:root { --accent: #6b4f35; }
 
 @page { size: 1920px 1080px; margin: 0; }
 
@@ -278,7 +278,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 22px 64px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0e9df;
   background: #fff;
   flex-shrink: 0;
 }
@@ -287,7 +287,7 @@ body {
 .nav__logo-name {
   font-family: 'DM Sans', sans-serif;
   font-size: 17px; font-weight: 400; font-style: italic;
-  color: #888; letter-spacing: 0.5px;
+  color: #948a7c; letter-spacing: 0.5px;
 }
 
 /* Тело слайда — центр по обеим осям */
@@ -309,7 +309,7 @@ body {
 .slide__number {
   position: absolute; bottom: 32px; right: 64px;
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-style: italic; font-size: 18px; color: #ccc;
+  font-style: italic; font-size: 18px; color: #cfc5b6;
 }
 
 /* ===== ТИТУЛЬНЫЙ (HERO) ===== */
@@ -326,15 +326,15 @@ body {
   max-width: 1200px; margin: 0 auto 32px;
 }
 .hero h1 em { font-style: italic; color: var(--accent); }
-.hero__desc { font-size: 26px; color: #666; line-height: 1.7; max-width: 900px; margin: 0 auto; }
-.hero__meta { font-size: 18px; color: #999; margin-top: 24px; letter-spacing: 1px; }
+.hero__desc { font-size: 26px; color: #6b6157; line-height: 1.7; max-width: 900px; margin: 0 auto; }
+.hero__meta { font-size: 18px; color: #a39889; margin-top: 24px; letter-spacing: 1px; }
 
 /* ===== ТРИ КАРТОЧКИ ===== */
 .cards {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 40px; max-width: 1280px; width: 100%; margin: 48px auto 0;
 }
-.card { background: #f9f9f9; border: 1px solid #e8e8e8; padding: 40px; }
+.card { background: #faf6f0; border: 1px solid #e5dccf; padding: 40px; }
 .card__num {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-style: italic; font-size: 19px; color: var(--accent); margin-bottom: 16px;
@@ -343,7 +343,7 @@ body {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 27px; font-weight: 700; line-height: 1.4; margin-bottom: 16px;
 }
-.card__text { font-size: 19px; color: #666; line-height: 1.7; }
+.card__text { font-size: 19px; color: #6b6157; line-height: 1.7; }
 
 /* ===== БАЗОВЫЕ ЭЛЕМЕНТЫ ===== */
 .section-heading {
@@ -353,7 +353,7 @@ body {
 }
 .section-heading em { font-style: italic; color: var(--accent); }
 
-.text { font-size: 24px; color: #444; line-height: 1.75; margin-bottom: 20px; }
+.text { font-size: 24px; color: #4a4238; line-height: 1.75; margin-bottom: 20px; }
 
 .sub-heading {
   font-family: 'Libre Baskerville', Georgia, serif;
@@ -361,15 +361,15 @@ body {
 }
 
 .highlight {
-  background: #f5f5f5; padding: 28px 32px; margin: 28px 0;
-  font-size: 22px; line-height: 1.7; color: #444;
+  background: #f5f0e8; padding: 28px 32px; margin: 28px 0;
+  font-size: 22px; line-height: 1.7; color: #4a4238;
 }
 
 .guide-list { list-style: none; margin: 16px 0; }
 .guide-list li {
-  font-size: 22px; line-height: 1.7; color: #444;
+  font-size: 22px; line-height: 1.7; color: #4a4238;
   padding: 14px 0 14px 28px; position: relative;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0e9df;
 }
 .guide-list li:last-child { border-bottom: none; }
 .guide-list li::before {
@@ -380,7 +380,7 @@ body {
 
 .footer-note {
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 32px; font-style: italic; color: #444;
+  font-size: 32px; font-style: italic; color: #4a4238;
   text-align: center;
 }
 .footer-note em { color: var(--accent); }
@@ -388,7 +388,7 @@ body {
 /* ===== СХЕМКА 1: ЦИТАТА ===== */
 .quote { max-width: 1000px; margin: 0 auto; text-align: center; }
 .quote__label {
-  font-size: 14px; font-weight: 600; color: #999;
+  font-size: 14px; font-weight: 600; color: #a39889;
   letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 32px;
 }
 .quote__mark {
@@ -403,7 +403,7 @@ body {
 }
 .quote__text em { color: var(--accent); }
 .quote__divider { width: 56px; height: 2px; background: var(--accent); margin: 0 auto 24px; }
-.quote__source { font-size: 20px; color: #888; line-height: 1.6; }
+.quote__source { font-size: 20px; color: #948a7c; line-height: 1.6; }
 
 /* ===== СХЕМКА 2: ШАГИ ===== */
 .steps { max-width: 1000px; margin: 0 auto; }
@@ -416,7 +416,7 @@ body {
 .steps__list { position: relative; padding-left: 44px; }
 .steps__list::before {
   content: ''; position: absolute; left: 10px; top: 12px; bottom: 12px;
-  width: 1px; background: #e8e8e8;
+  width: 1px; background: #e5dccf;
 }
 .steps__item { position: relative; padding-bottom: 32px; }
 .steps__item:last-child { padding-bottom: 0; }
@@ -427,7 +427,7 @@ body {
 }
 .steps__item--active .steps__dot { background: var(--accent); }
 .steps__item-title { font-weight: 600; font-size: 24px; color: #1a1a1a; margin-bottom: 6px; }
-.steps__item-text { font-size: 20px; color: #666; line-height: 1.6; }
+.steps__item-text { font-size: 20px; color: #6b6157; line-height: 1.6; }
 
 /* ===== СХЕМКА 3: НУМЕРОВАННЫЙ СПИСОК ===== */
 .numlist { max-width: 1000px; margin: 0 auto; }
@@ -439,7 +439,7 @@ body {
 .numlist__heading em { font-style: italic; color: var(--accent); }
 .numlist__item {
   display: flex; gap: 32px; align-items: baseline;
-  padding: 22px 0; border-bottom: 1px solid #f0f0f0;
+  padding: 22px 0; border-bottom: 1px solid #f0e9df;
 }
 .numlist__item:last-child { border-bottom: none; }
 .numlist__num {
@@ -449,12 +449,12 @@ body {
 }
 .numlist__text { font-size: 23px; color: #1a1a1a; line-height: 1.6; }
 .numlist__text strong { font-weight: 600; }
-.numlist__text span { color: #666; }
+.numlist__text span { color: #6b6157; }
 
 /* ===== СХЕМКА 4: АКЦЕНТНАЯ ПОЛОСА ===== */
 .accent-bar { max-width: 1000px; margin: 0 auto; }
 .accent-bar__label {
-  font-size: 14px; font-weight: 600; color: #999;
+  font-size: 14px; font-weight: 600; color: #a39889;
   letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 28px;
 }
 .accent-bar__block { border-left: 4px solid var(--accent); padding-left: 40px; }
@@ -463,11 +463,11 @@ body {
   font-size: 40px; font-weight: 700; line-height: 1.35; margin-bottom: 20px;
 }
 .accent-bar__title em { font-style: italic; color: var(--accent); }
-.accent-bar__text { font-size: 22px; color: #444; line-height: 1.75; margin-bottom: 24px; }
+.accent-bar__text { font-size: 22px; color: #4a4238; line-height: 1.75; margin-bottom: 24px; }
 .accent-bar__footer {
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 20px; font-style: italic; color: #888;
-  padding-top: 20px; border-top: 1px solid #f0f0f0;
+  font-size: 20px; font-style: italic; color: #948a7c;
+  padding-top: 20px; border-top: 1px solid #f0e9df;
 }
 
 /* ===== СХЕМКА 5: ЧЕК-ЛИСТ ===== */
@@ -482,19 +482,19 @@ body {
 .checklist__col-label {
   font-size: 14px; font-weight: 600; letter-spacing: 1.5px;
   text-transform: uppercase; padding-bottom: 18px; margin-bottom: 14px;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e5dccf;
 }
 .checklist__col-label--do { color: var(--accent); }
-.checklist__col-label--dont { color: #999; }
-.checklist__col:first-child { padding-right: 32px; border-right: 1px solid #f0f0f0; }
+.checklist__col-label--dont { color: #a39889; }
+.checklist__col:first-child { padding-right: 32px; border-right: 1px solid #f0e9df; }
 .checklist__col:last-child { padding-left: 32px; }
 .checklist__item {
   display: flex; gap: 14px; padding: 12px 0;
-  font-size: 21px; color: #444; line-height: 1.6; align-items: baseline;
+  font-size: 21px; color: #4a4238; line-height: 1.6; align-items: baseline;
 }
 .checklist__mark { flex-shrink: 0; font-size: 20px; font-weight: 700; width: 22px; }
 .checklist__mark--do { color: var(--accent); }
-.checklist__mark--dont { color: #ccc; }
+.checklist__mark--dont { color: #cfc5b6; }
 
 /* ===== СХЕМКА 6: МЕТРИКИ ===== */
 .metrics { max-width: 1200px; margin: 0 auto; }
@@ -505,15 +505,15 @@ body {
 }
 .metrics__heading em { font-style: italic; color: var(--accent); }
 .metrics__row { display: grid; grid-template-columns: 1fr 1fr 1fr; }
-.metrics__item { text-align: center; padding: 32px 20px; border-right: 1px solid #f0f0f0; }
+.metrics__item { text-align: center; padding: 32px 20px; border-right: 1px solid #f0e9df; }
 .metrics__item:last-child { border-right: none; }
 .metrics__number {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-style: italic; font-size: 72px; color: var(--accent); opacity: 0.25;
   line-height: 1; margin-bottom: 12px;
 }
-.metrics__label { font-size: 16px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
-.metrics__desc { font-size: 19px; color: #666; line-height: 1.5; }
+.metrics__label { font-size: 16px; color: #948a7c; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.metrics__desc { font-size: 19px; color: #6b6157; line-height: 1.5; }
 
 /* ===== СХЕМКА 7: ВОПРОС-ОТВЕТ ===== */
 .qa { max-width: 1000px; margin: 0 auto; }
@@ -534,7 +534,7 @@ body {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-style: italic; font-size: 40px; color: var(--accent); opacity: 0.25;
 }
-.qa__answer { font-size: 22px; color: #444; line-height: 1.7; padding-left: 48px; border-left: 1px solid #e8e8e8; }
+.qa__answer { font-size: 22px; color: #4a4238; line-height: 1.7; padding-left: 48px; border-left: 1px solid #e5dccf; }
 
 /* ===== СХЕМКА 8: ФОРМУЛА ===== */
 .formula { max-width: 1200px; margin: 0 auto; }
@@ -545,16 +545,16 @@ body {
 }
 .formula__heading em { font-style: italic; color: var(--accent); }
 .formula__row { display: flex; align-items: center; gap: 24px; margin-bottom: 28px; }
-.formula__step { flex: 1; background: #f5f5f5; padding: 28px 22px; text-align: center; }
+.formula__step { flex: 1; background: #f5f0e8; padding: 28px 22px; text-align: center; }
 .formula__step-title {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 22px; font-weight: 700; margin-bottom: 6px;
 }
-.formula__step-text { font-size: 17px; color: #666; line-height: 1.5; }
+.formula__step-text { font-size: 17px; color: #6b6157; line-height: 1.5; }
 .formula__arrow { color: var(--accent); font-size: 26px; flex-shrink: 0; opacity: 0.4; }
 .formula__result { border: 1px solid var(--accent); padding: 28px 22px; text-align: center; flex: 1; }
 .formula__result .formula__step-title { color: var(--accent); }
-.formula__note { font-size: 19px; color: #888; font-style: italic; text-align: center; margin-top: 12px; }
+.formula__note { font-size: 19px; color: #948a7c; font-style: italic; text-align: center; margin-top: 12px; }
 
 /* ===== PRINT / PDF ===== */
 @media print {

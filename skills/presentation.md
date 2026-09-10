@@ -12,7 +12,7 @@ description: Создаёт HTML-презентацию для видеоуро�
 Это **презентация для видеоуроков**. Каждый слайд — отдельный экран 100vh. Макет разделён вертикально:
 - **Левые 60%** — зона контента (текст, списки, карточки)
 - **Правые 40%** — пустая зона под видео (туда в монтаже вставляется видео автора)
-- Между ними — тонкая вертикальная линия-разделитель `#e8e8e8`
+- Между ними — тонкая вертикальная линия-разделитель `#e5dccf`
 
 Правая часть ВСЕГДА пустая. Никогда не размещай туда контент.
 
@@ -21,31 +21,31 @@ description: Создаёт HTML-презентацию для видеоуро�
 ### Цвета
 - Фон: `#ffffff`
 - Текст: `#1a1a1a`
-- Текст второстепенный: `#444`, `#666`
-- Акцент (бордовый): `#710C04` — для курсивных выделений в заголовках, точек в списках, бейджей
-- Серые блоки: `#f5f5f5` — без закруглений, без цветных линий
-- Карточки: `#f9f9f9` с рамкой `#e8e8e8` — квадратные углы
-- На тёмном фоне НИКОГДА не использовать бордовый — заменять на `#c9a07a`
+- Текст второстепенный: `#4a4238`, `#6b6157`
+- Акцент (коричневый): `#6b4f35` — для курсивных выделений в заголовках, точек в списках, бейджей
+- �бежевые блоки: `#f5f0e8` — без закруглений, без цветных линий
+- Карточки: `#faf6f0` с рамкой `#e5dccf` — квадратные углы
+- На тёмном фоне НИКОГДА не использовать коричневый — заменять на `#c9a07a`
 
 ### Шрифты (Google Fonts)
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&family=DM+Sans:ital@1&display=swap" rel="stylesheet">
 ```
-- **Заголовки**: `Libre Baskerville`, Georgia, serif — жирный, с курсивными акцентами бордовым
+- **Заголовки**: `Libre Baskerville`, Georgia, serif — жирный, с курсивными акцентами коричневым
 - **Основной текст**: `Inter`, sans-serif — 16px, line-height 1.75
 - **Подзаголовки**: `Libre Baskerville` — 20px, жирный
-- **Декоративные цифры**: `Libre Baskerville`, italic, opacity 0.25, цвет `#710C04` — для нумерованных списков и метрик
-- **Ник maysoulme**: `DM Sans`, italic, `#888`
+- **Декоративные цифры**: `Libre Baskerville`, italic, opacity 0.25, цвет `#6b4f35` — для нумерованных списков и метрик
+- **Ник maysoulme**: `DM Sans`, italic, `#948a7c`
 
 ### Навбар (на каждом слайде)
 - Ширина = 60% (только зона контента)
 - Логотип MS слева, текст *maysoulme* справа
 - Логотип: `<img src="https://maiyamaiya19999-bit.github.io/maysoulme-assets/logo-ms.png" alt="MS">` высота 30px
-- Текст maysoulme: DM Sans italic, 14px, цвет `#888`, с `margin-right: 8px`
-- Тонкая линия снизу `#f0f0f0`
+- Текст maysoulme: DM Sans italic, 14px, цвет `#948a7c`, с `margin-right: 8px`
+- Тонкая линия снизу `#f0e9df`
 
 ### Бейдж (на титульном слайде)
-- Тонкая рамка 1px бордовая, текст капсом, разрядка 2px, размер 11px
+- Тонкая рамка 1px коричневая, текст капсом, разрядка 2px, размер 11px
 - Текст: «УРОК», «ГАЙД», «КУРС» и т.п.
 
 ## Структура слайдов
@@ -54,9 +54,9 @@ description: Создаёт HTML-презентацию для видеоуро�
 ```
 Навбар
 Бейдж «УРОК»
-Заголовок h1 (Libre Baskerville, 36px, с курсивным акцентом бордовым)
-Описание (Inter, 17px, #666)
-Мета-инфо (13px, #999, с разрядкой)
+Заголовок h1 (Libre Baskerville, 36px, с курсивным акцентом коричневым)
+Описание (Inter, 17px, #6b6157)
+Мета-инфо (13px, #a39889, с разрядкой)
 ```
 
 ### Слайды 2+ — Контентные
@@ -87,7 +87,7 @@ description: Создаёт HTML-презентацию для видеоуро�
 ```html
 <h2 class="section-heading">Текст заголовка <em>акцентная часть</em></h2>
 ```
-Слово или фраза в `<em>` выделяется курсивом и бордовым цветом.
+Слово или фраза в `<em>` выделяется курсивом и коричневым цветом.
 
 ### Серый блок .highlight
 Для ключевых мыслей, выводов, важных замечаний.
@@ -96,7 +96,7 @@ description: Создаёт HTML-презентацию для видеоуро�
 ```
 
 ### Список .guide-list
-С бордовыми точками, разделителями между пунктами.
+С коричневыми точками, разделителями между пунктами.
 ```html
 <ul class="guide-list">
   <li><strong>Жирный пункт.</strong> Пояснение к пункту.</li>
@@ -257,7 +257,7 @@ description: Создаёт HTML-презентацию для видеоуро�
 ```
 
 ### Схемка 8: Формула
-Для визуальных формул, уравнений (A + B = C). Серые блоки для компонентов, бордовая рамка для результата.
+Для визуальных формул, уравнений (A + B = C). Серые блоки для компонентов, коричневая рамка для результата.
 ```html
 <div class="slide__inner">
   <div class="formula__heading">Заголовок <em>акцент</em></div>
@@ -287,7 +287,7 @@ description: Создаёт HTML-презентацию для видеоуро�
 
 ```css
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-:root { --accent: #710C04; --split: 60%; }
+:root { --accent: #6b4f35; --split: 60%; }
 
 @page {
   size: 1280px 720px;
@@ -318,7 +318,7 @@ body {
   bottom: 0;
   left: var(--split);
   width: 1px;
-  background: #e8e8e8;
+  background: #e5dccf;
 }
 
 .nav {
@@ -326,7 +326,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 16px 48px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0e9df;
   background: #fff;
   z-index: 10;
   flex-shrink: 0;
@@ -337,7 +337,7 @@ body {
 .nav__logo-name {
   font-family: 'DM Sans', sans-serif;
   font-size: 14px; font-weight: 400; font-style: italic;
-  color: #888; letter-spacing: 0.5px;
+  color: #948a7c; letter-spacing: 0.5px;
   margin-right: 8px;
 }
 
@@ -368,8 +368,8 @@ body {
   font-size: 36px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;
 }
 .hero h1 em { font-style: italic; color: var(--accent); }
-.hero__desc { font-size: 17px; color: #666; line-height: 1.7; }
-.hero__meta { font-size: 13px; color: #999; margin-top: 16px; letter-spacing: 1px; }
+.hero__desc { font-size: 17px; color: #6b6157; line-height: 1.7; }
+.hero__meta { font-size: 13px; color: #a39889; margin-top: 16px; letter-spacing: 1px; }
 
 .section-heading {
   font-family: 'Libre Baskerville', Georgia, serif;
@@ -378,20 +378,20 @@ body {
 }
 .section-heading em { font-style: italic; color: var(--accent); }
 
-.highlight { background: #f5f5f5; padding: 18px 22px; margin: 20px 0; font-size: 15px; line-height: 1.75; color: #444; }
+.highlight { background: #f5f0e8; padding: 18px 22px; margin: 20px 0; font-size: 15px; line-height: 1.75; color: #4a4238; }
 
 .sub-heading {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 20px; font-weight: 700; padding: 24px 0 10px;
 }
 
-.text { font-size: 16px; color: #444; line-height: 1.75; margin-bottom: 14px; }
+.text { font-size: 16px; color: #4a4238; line-height: 1.75; margin-bottom: 14px; }
 
 .guide-list { list-style: none; margin: 12px 0 20px; }
 .guide-list li {
-  font-size: 15px; line-height: 1.7; color: #444;
+  font-size: 15px; line-height: 1.7; color: #4a4238;
   padding: 6px 0 6px 18px; position: relative;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0e9df;
 }
 .guide-list li:last-child { border-bottom: none; }
 .guide-list li::before {
@@ -400,7 +400,7 @@ body {
 }
 .guide-list li strong { color: #1a1a1a; }
 
-.scenario-card { border: 1px solid #e8e8e8; padding: 24px; margin: 18px 0; background: #f9f9f9; }
+.scenario-card { border: 1px solid #e5dccf; padding: 24px; margin: 18px 0; background: #faf6f0; }
 .scenario-card__num {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-style: italic; font-size: 13px;
@@ -412,16 +412,16 @@ body {
 }
 .scenario-card__point { margin-bottom: 12px; }
 .scenario-card__point-label { font-weight: 600; font-size: 15px; color: #1a1a1a; }
-.scenario-card__point-text { font-size: 14px; color: #666; line-height: 1.7; }
+.scenario-card__point-text { font-size: 14px; color: #6b6157; line-height: 1.7; }
 .scenario-card__tip {
-  background: #f0f0f0; padding: 12px 16px; margin-top: 14px;
-  font-size: 13px; color: #555; line-height: 1.65;
+  background: #f0e9df; padding: 12px 16px; margin-top: 14px;
+  font-size: 13px; color: #5a5147; line-height: 1.65;
 }
 .scenario-card__tip strong { color: var(--accent); }
 
 .footer-note {
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 17px; font-style: italic; color: #444;
+  font-size: 17px; font-style: italic; color: #4a4238;
   padding: 28px 0 0;
 }
 .footer-note em { color: var(--accent); }
@@ -429,7 +429,7 @@ body {
 /* ===== СХЕМКА 1: ЦИТАТА-АКЦЕНТ ===== */
 
 .quote-slide__label {
-  font-size: 11px; font-weight: 600; color: #999;
+  font-size: 11px; font-weight: 600; color: #a39889;
   letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px;
 }
 .quote-slide__mark {
@@ -444,7 +444,7 @@ body {
 }
 .quote-slide__text em { color: var(--accent); }
 .quote-slide__divider { width: 40px; height: 2px; background: var(--accent); margin-bottom: 20px; }
-.quote-slide__source { font-size: 14px; color: #888; line-height: 1.6; }
+.quote-slide__source { font-size: 14px; color: #948a7c; line-height: 1.6; }
 
 /* ===== СХЕМКА 2: ШАГИ С ЛИНИЕЙ ===== */
 
@@ -456,7 +456,7 @@ body {
 .steps__list { position: relative; padding-left: 32px; }
 .steps__list::before {
   content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
-  width: 1px; background: #e8e8e8;
+  width: 1px; background: #e5dccf;
 }
 .steps__item { position: relative; padding-bottom: 24px; }
 .steps__item:last-child { padding-bottom: 0; }
@@ -467,7 +467,7 @@ body {
 }
 .steps__item--active .steps__dot { background: var(--accent); }
 .steps__item-title { font-weight: 600; font-size: 16px; color: #1a1a1a; margin-bottom: 4px; }
-.steps__item-text { font-size: 14px; color: #666; line-height: 1.6; }
+.steps__item-text { font-size: 14px; color: #6b6157; line-height: 1.6; }
 
 /* ===== СХЕМКА 3: НУМЕРОВАННЫЙ СПИСОК ===== */
 
@@ -478,7 +478,7 @@ body {
 .numlist__heading em { font-style: italic; color: var(--accent); }
 .numlist__item {
   display: flex; gap: 24px; align-items: baseline;
-  padding: 16px 0; border-bottom: 1px solid #f0f0f0;
+  padding: 16px 0; border-bottom: 1px solid #f0e9df;
 }
 .numlist__item:last-child { border-bottom: none; }
 .numlist__num {
@@ -489,12 +489,12 @@ body {
 }
 .numlist__text { font-size: 15px; color: #1a1a1a; line-height: 1.6; }
 .numlist__text strong { font-weight: 600; }
-.numlist__text span { color: #666; }
+.numlist__text span { color: #6b6157; }
 
 /* ===== СХЕМКА 4: АКЦЕНТНАЯ ПОЛОСА СЛЕВА ===== */
 
 .accent-bar__label {
-  font-size: 11px; font-weight: 600; color: #999;
+  font-size: 11px; font-weight: 600; color: #a39889;
   letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px;
 }
 .accent-bar__block { border-left: 3px solid var(--accent); padding-left: 28px; }
@@ -503,11 +503,11 @@ body {
   font-size: 26px; font-weight: 700; line-height: 1.35; margin-bottom: 16px;
 }
 .accent-bar__title em { font-style: italic; color: var(--accent); }
-.accent-bar__text { font-size: 15px; color: #444; line-height: 1.75; margin-bottom: 20px; }
+.accent-bar__text { font-size: 15px; color: #4a4238; line-height: 1.75; margin-bottom: 20px; }
 .accent-bar__footer {
   font-family: 'Libre Baskerville', Georgia, serif;
-  font-size: 15px; font-style: italic; color: #888;
-  padding-top: 16px; border-top: 1px solid #f0f0f0;
+  font-size: 15px; font-style: italic; color: #948a7c;
+  padding-top: 16px; border-top: 1px solid #f0e9df;
 }
 
 /* ===== СХЕМКА 5: ЧЕК-ЛИСТ ===== */
@@ -521,19 +521,19 @@ body {
 .checklist__col-label {
   font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
   text-transform: uppercase; padding-bottom: 14px; margin-bottom: 10px;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e5dccf;
 }
 .checklist__col-label--do { color: var(--accent); }
-.checklist__col-label--dont { color: #999; }
-.checklist__col:first-child { padding-right: 20px; border-right: 1px solid #f0f0f0; }
+.checklist__col-label--dont { color: #a39889; }
+.checklist__col:first-child { padding-right: 20px; border-right: 1px solid #f0e9df; }
 .checklist__col:last-child { padding-left: 20px; }
 .checklist__item {
   display: flex; gap: 10px; padding: 8px 0;
-  font-size: 14px; color: #444; line-height: 1.6; align-items: baseline;
+  font-size: 14px; color: #4a4238; line-height: 1.6; align-items: baseline;
 }
 .checklist__mark { flex-shrink: 0; font-size: 14px; font-weight: 700; width: 16px; }
 .checklist__mark--do { color: var(--accent); }
-.checklist__mark--dont { color: #ccc; }
+.checklist__mark--dont { color: #cfc5b6; }
 
 /* ===== СХЕМКА 6: ТРИ МЕТРИКИ ===== */
 
@@ -545,7 +545,7 @@ body {
 .metrics__row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
 .metrics__item {
   text-align: center; padding: 24px 12px;
-  border-right: 1px solid #f0f0f0;
+  border-right: 1px solid #f0e9df;
 }
 .metrics__item:last-child { border-right: none; }
 .metrics__number {
@@ -555,10 +555,10 @@ body {
   line-height: 1; margin-bottom: 8px;
 }
 .metrics__label {
-  font-size: 12px; color: #888; text-transform: uppercase;
+  font-size: 12px; color: #948a7c; text-transform: uppercase;
   letter-spacing: 1px; margin-bottom: 8px;
 }
-.metrics__desc { font-size: 13px; color: #666; line-height: 1.5; }
+.metrics__desc { font-size: 13px; color: #6b6157; line-height: 1.5; }
 
 /* ===== СХЕМКА 7: ВОПРОС-ОТВЕТ ===== */
 
@@ -580,8 +580,8 @@ body {
   font-size: 28px; color: var(--accent); opacity: 0.25;
 }
 .qa__answer {
-  font-size: 15px; color: #444; line-height: 1.7;
-  padding-left: 32px; border-left: 1px solid #e8e8e8;
+  font-size: 15px; color: #4a4238; line-height: 1.7;
+  padding-left: 32px; border-left: 1px solid #e5dccf;
 }
 
 /* ===== СХЕМКА 8: ФОРМУЛА ===== */
@@ -595,19 +595,19 @@ body {
   display: flex; align-items: center; gap: 16px; margin-bottom: 32px;
 }
 .formula__step {
-  flex: 1; background: #f5f5f5; padding: 18px 16px; text-align: center;
+  flex: 1; background: #f5f0e8; padding: 18px 16px; text-align: center;
 }
 .formula__step-title {
   font-family: 'Libre Baskerville', Georgia, serif;
   font-size: 15px; font-weight: 700; margin-bottom: 4px;
 }
-.formula__step-text { font-size: 12px; color: #666; line-height: 1.5; }
+.formula__step-text { font-size: 12px; color: #6b6157; line-height: 1.5; }
 .formula__arrow { color: var(--accent); font-size: 18px; flex-shrink: 0; opacity: 0.4; }
 .formula__result {
   border: 1px solid var(--accent); padding: 18px 16px; text-align: center; flex: 1;
 }
 .formula__result .formula__step-title { color: var(--accent); }
-.formula__note { font-size: 14px; color: #888; font-style: italic; margin-top: 8px; }
+.formula__note { font-size: 14px; color: #948a7c; font-style: italic; margin-top: 8px; }
 
 /* ===== АДАПТИВ ===== */
 
