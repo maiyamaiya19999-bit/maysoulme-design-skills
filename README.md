@@ -2,7 +2,7 @@
 
 Набор скиллов для Claude Code, на которых собирается весь визуальный контент блога [@maysoulme](https://t.me/maysoulme): карусели для Instagram, гайды-лендинги, презентации к урокам.
 
-Подробное описание и инструкция: **[лендинг-гайд](https://maiyamaiya19999-bit.github.io/maysoulme-design-skills/)**
+Подробное описание и инструкция: **[лендинг-гайд](https://maysoulme.ru/design-skills/)**
 
 ## Что внутри
 
